@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Column from './column/Column'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>ADMINISTRADOR DE PACIENTES</h1>
+      <div className='container'>
+        <div className='row'>
+          <Column titulo="CREAR MI CITA"></Column>
+          <Column titulo="ADMINISTRA TUS CITAS"></Column>
+        </div>
+      </div>
     </div>
   );
 }
