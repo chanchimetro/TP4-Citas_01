@@ -3,9 +3,9 @@ import './Input.css';
 function Input(props) {
     let input;
     if (props.input === "input") {
-        input = <input type={props.type} name={props.name} class="u-full-width" placeholder={props.placeholder} value=""></input>;
+        input = <input type={props.type} id={props.name} className="u-full-width" placeholder={props.placeholder}></input>;
     } else {
-        input = <textarea name={props.name} class="u-full-width"></textarea>
+        input = <textarea id={props.name} className="u-full-width"></textarea>
     }
     return(
         <>

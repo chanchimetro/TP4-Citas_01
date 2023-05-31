@@ -3,18 +3,17 @@ import Input from '../input/Input'
 
 function Form({ setCitas, citas }) {
     function handleSubmit(e) {
-        let cita = {
+        e.preventDefault();
+        setCitas( [...citas, {
+            id: citas.length + 1,
             mascota: e.target.mascota.value,
             dueño: e.target.propietario.value,
-            fecha: e.target.date.value,
+            fecha: e.target.fecha.value,
             hora: e.target.hora.value,
             sintomas: e.target.sintomas.value 
-        }
-        setCitas(
-            citas + cita
-        );
-        console.log(citas);
+        }] );
     }
+
     return (
         <form onSubmit={(e) => handleSubmit(e)}>
             <Input input="input" label='Nombre Mascota' type='text' name='mascota' placeholder='Nombre Mascota'/>
@@ -22,7 +21,7 @@ function Form({ setCitas, citas }) {
             <Input input="input" label='Fecha' type='date' name='fecha' placeholder=''/>
             <Input input="input" label='hora' type='time' name='hora' placeholder=''/>
             <Input input="texarea" label='Sintomas' name='sintomas'/>
-            <button type="submit" class="u-full-width button-primary">Agregar Cita</button>
+            <button type="submit" className='u-full-width button-primary'>Agregar Cita</button>
         </form>
     );
 }

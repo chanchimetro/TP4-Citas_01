@@ -1,6 +1,10 @@
 import './Card.css'
 
-function Card({cita}) {
+function Card({citas, cita, setCitas}) {
+    function handleClick() {
+        setCitas(citas.filter(c => c.id !== cita.id))
+    }
+
     return(
         <div class="cita">
             <p>Mascota: <span>{cita.mascota}</span></p>
@@ -8,7 +12,7 @@ function Card({cita}) {
             <p>Fecha: <span>{cita.fecha}</span></p>
             <p>Hora: <span>{cita.hora}</span></p>
             <p>Sintomas: <span>{cita.sintomas}</span></p>
-            <button class="button eliminar u-full-width">Eliminar ×</button>
+            <button class="button eliminar u-full-width" onClick={() => handleClick()}>Eliminar ×</button>
         </div>
     );
 }

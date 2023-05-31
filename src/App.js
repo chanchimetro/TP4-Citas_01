@@ -7,6 +7,7 @@ import { useState } from 'react';
 function App() {
   const [citas, setCitas] = useState([
     {
+      id: 1,
       mascota: 'Nina',
       dueño: 'Martin',
       fecha: '2021-08-05',
@@ -14,6 +15,7 @@ function App() {
       sintomas: 'Le duele la pierna'
     },
     {
+      id: 2,
       mascota: 'Nina',
       dueño: 'Martin',
       fecha: '2021-08-05',
@@ -21,6 +23,7 @@ function App() {
       sintomas: 'Le duele la pierna'
     },
     {
+      id: 3,
       mascota: 'Nina',
       dueño: 'Martin',
       fecha: '2021-08-05',
@@ -28,7 +31,6 @@ function App() {
       sintomas: 'Le duele la pierna'
     }
   ]);
-
 
   return (
     <div className="App">
@@ -39,7 +41,7 @@ function App() {
             <Form setCitas={setCitas} citas={citas}/>
           </Column>
           <Column titulo="ADMINISTRA TUS CITAS">
-            <List citas={citas}/>
+            <List citas={citas} setCitas={setCitas}/>
           </Column>
         </div>
       </div>
