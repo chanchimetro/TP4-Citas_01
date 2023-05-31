@@ -16,19 +16,19 @@ function App() {
     },
     {
       id: 2,
-      mascota: 'Nina',
-      dueño: 'Martin',
+      mascota: 'Roco',
+      dueño: 'Federico',
       fecha: '2021-08-05',
       hora: '08:20',
-      sintomas: 'Le duele la pierna'
+      sintomas: 'Le duele la panza'
     },
     {
       id: 3,
-      mascota: 'Nina',
-      dueño: 'Martin',
+      mascota: 'Pepe',
+      dueño: 'Josefina',
       fecha: '2021-08-05',
       hora: '08:20',
-      sintomas: 'Le duele la pierna'
+      sintomas: 'Le duele la cabeza'
     }
   ]);
 
