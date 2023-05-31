@@ -1,8 +1,13 @@
-import './list.css';
+import './List.css';
+import Card from '../card/Card'
 
-function List() {
+function List({citas}) {
     return(
-        <></>
+        <>
+        {citas.map((cita) => (
+            <Card cita={cita}/>
+        ))}
+        </>
     );
 }
 

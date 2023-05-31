@@ -1,9 +1,22 @@
 import './Form.css';
 import Input from '../input/Input'
 
-function Form(props) {
+function Form({ setCitas, citas }) {
+    function handleSubmit(e) {
+        let cita = {
+            mascota: e.target.mascota.value,
+            dueño: e.target.propietario.value,
+            fecha: e.target.date.value,
+            hora: e.target.hora.value,
+            sintomas: e.target.sintomas.value 
+        }
+        setCitas(
+            citas + cita
+        );
+        console.log(citas);
+    }
     return (
-        <form>
+        <form onSubmit={(e) => handleSubmit(e)}>
             <Input input="input" label='Nombre Mascota' type='text' name='mascota' placeholder='Nombre Mascota'/>
             <Input input="input" label='Nombre Dueño' type='text' name='propietario' placeholder='Nombre dueño de la mascota'/>
             <Input input="input" label='Fecha' type='date' name='fecha' placeholder=''/>
