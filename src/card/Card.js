@@ -1,9 +1,9 @@
 import './Card.css'
 
-function Card({cita, setPepe}) {
+function Card({cita, setDel}) {
     function handleClick() {
         let modal = document.getElementById('modal');
-        setPepe(cita.id);
+        setDel(cita.id);
         modal.style.display = 'block';
     }
 

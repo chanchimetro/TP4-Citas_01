@@ -1,13 +1,13 @@
 import './Modal.css';
 
-function Modal({citas, setCitas, pepe}){
+function Modal({citas, setCitas, del}){
     let modal = document.getElementById('modal');
     function handleExit() {
         modal.style.display = 'none';
     }
 
     function handleDelete() {
-        setCitas(citas.filter(c => c.id !== pepe));
+        setCitas(citas.filter(c => c.id !== del));
         modal.style.display = 'none';
     }
     
