@@ -30,6 +30,11 @@
 .modal-body {
     padding: 2px 16px;
 }
+
+.modal-body p {
+    font-weight: bold;
+}
+
 .btn-eliminar {
     float: right;
     background-color: red;
@@ -39,7 +44,6 @@
 /* Modal Footer */
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
     color: white;
 }
 

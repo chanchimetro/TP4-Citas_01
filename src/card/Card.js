@@ -1,10 +1,10 @@
 import './Card.css'
 
-function Card({citas, cita, setCitas}) {
+function Card({cita, setPepe}) {
     function handleClick() {
         let modal = document.getElementById('modal');
+        setPepe(cita.id);
         modal.style.display = 'block';
-        //setCitas(citas.filter(c => c.id !== cita.id))
     }
 
     return(

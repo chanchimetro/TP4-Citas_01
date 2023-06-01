@@ -37,7 +37,6 @@ function App() {
     <div className="App">
       <h1>ADMINISTRADOR DE PACIENTES</h1>
       <div className='container'>
-        <Modal/>
         <div className='row'>
           <Column titulo="CREAR MI CITA">
             <Form setCitas={setCitas} citas={citas}/>
