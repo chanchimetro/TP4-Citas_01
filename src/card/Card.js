@@ -2,7 +2,9 @@ import './Card.css'
 
 function Card({citas, cita, setCitas}) {
     function handleClick() {
-        setCitas(citas.filter(c => c.id !== cita.id))
+        let modal = document.getElementById('modal');
+        modal.style.display = 'block';
+        //setCitas(citas.filter(c => c.id !== cita.id))
     }
 
     return(

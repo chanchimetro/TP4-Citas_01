@@ -2,6 +2,7 @@ import './App.css';
 import Column from './column/Column'
 import Form from './form/Form'
 import List from './list/List'
+import Modal from './modal/Modal'
 import { useState } from 'react';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
     <div className="App">
       <h1>ADMINISTRADOR DE PACIENTES</h1>
       <div className='container'>
+        <Modal/>
         <div className='row'>
           <Column titulo="CREAR MI CITA">
             <Form setCitas={setCitas} citas={citas}/>
