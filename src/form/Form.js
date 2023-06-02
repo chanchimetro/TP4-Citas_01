@@ -1,17 +1,22 @@
 import './Form.css';
 import Input from '../input/Input'
+import { useState } from 'react';
 
 function Form({ setCitas, citas }) {
+    const [counter, setCounter] = useState(citas.length + 1);
+
     function handleSubmit(e) {
         e.preventDefault();
+        setCounter(counter + 1);
         setCitas( [...citas, {
-            id: citas.length + 1,
+            id: counter,
             mascota: e.target.mascota.value,
             dueño: e.target.propietario.value,
             fecha: e.target.fecha.value,
             hora: e.target.hora.value,
             sintomas: e.target.sintomas.value 
         }] );
+        console.log(citas);
     }
 
     return (

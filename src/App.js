@@ -2,7 +2,6 @@ import './App.css';
 import Column from './column/Column'
 import Form from './form/Form'
 import List from './list/List'
-import Modal from './modal/Modal'
 import { useState } from 'react';
 
 function App() {
